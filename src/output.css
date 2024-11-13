@@ -115,6 +115,10 @@
   cursor: pointer;
 }
 
+.flex-row{
+  flex-direction: row;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -125,6 +129,10 @@
 
 .justify-center{
   justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
 }
 
 .gap-2{
@@ -206,6 +214,11 @@
   background-color: rgba(251, 251, 251, 1);
 }
 
+.bg-green-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -279,6 +292,11 @@
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
+.text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
 .line-through{
   text-decoration-line: line-through;
 }
@@ -290,4 +308,14 @@
 
 body{
   font-family: "Poppins";
+}
+
+.placeholder\:text-red-600::-moz-placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-red-600::placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }

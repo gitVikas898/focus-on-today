@@ -1,8 +1,12 @@
 const displayMessage = document.querySelector('.status-message');
 const checkBoxContainer = document.querySelectorAll('.input-container');
 const progressElement = document.querySelector('.progress');
+const dateElement = document.querySelector('.myDate');
 let progress = 0;
 let step = 100/checkBoxContainer.length;
+const mydate = new Date();
+const currentDate = mydate.toDateString();
+dateElement.innerText = currentDate;
 
 checkBoxContainer.forEach(container=>{
         const checkbox = container.querySelector('.checkbox');
@@ -12,6 +16,7 @@ checkBoxContainer.forEach(container=>{
         checkbox.addEventListener("click",()=>{
 
             if(inputElement.value === ""){
+                inputElement.classList.add('placeholder:text-red-600')
                 displayMessage.innerText = "Please Set Your Goals First"
                 displayMessage.classList.add('text-red-500');
                 checkbox.classList.add('border-red-500')
@@ -27,6 +32,7 @@ checkBoxContainer.forEach(container=>{
                  container.classList.toggle('border-green-500');
                  checkbox.classList.remove('border-red-500');
                  checkbox.classList.toggle('border-green-500')
+                 inputElement.classList.toggle('text-green-500')
 
 
             if(checkbox.classList.contains('border-green-500')){
